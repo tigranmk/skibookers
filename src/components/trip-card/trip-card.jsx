@@ -1,4 +1,4 @@
-import { Button } from "../button/button";
+import { Button } from "ui/button/button";
 
 import styles from "./trip-card.module.css";
 

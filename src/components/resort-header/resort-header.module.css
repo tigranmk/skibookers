@@ -1,11 +1,13 @@
 .header {
   position: relative;
-  height: 280px;
+  height: 260px;
   background-size: cover;
   background-position: center;
   border-radius: 16px;
   margin-bottom: 32px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: flex-end;
 }
 
 .overlay {
@@ -13,17 +15,51 @@
   color: #fff;
   padding: 32px;
   border-radius: 16px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
 
 .name {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .header {
+    height: 180px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  .overlay {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .overlay {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
 }
