@@ -1,0 +1,17 @@
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.1rem;
+}
+
+.totalPrice strong {
+  font-size: 1.8rem;
+  color: #0066ff;
+}

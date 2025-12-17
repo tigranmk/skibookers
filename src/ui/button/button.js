@@ -1,9 +1,15 @@
 import clsx from "clsx";
-
 import styles from "./button.module.css";
 
+/**
+ * Button component
+ * @param {string} variant - "primary" | "secondary" | "danger"
+ * @param {string} size - "small" | "medium" | "large"
+ */
+
 export const Button = ({
-  variant = "edit",
+  variant = "primary",
+  size = "medium",
   disabled = false,
   onClick,
   children,
@@ -16,7 +22,7 @@ export const Button = ({
       type={type}
       className={clsx(
         styles[`${variant}Btn`],
-        disabled && styles.disabledBtn
+        styles[size]
       )}
       disabled={disabled}
       onClick={onClick}

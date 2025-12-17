@@ -1,0 +1,12 @@
+.aiBanner {
+  background: #f0f7ff;
+  border: 1px solid #d1e5ff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #0066ff;
+}

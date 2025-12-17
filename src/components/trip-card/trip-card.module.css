@@ -1,47 +1,54 @@
 .card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 32px;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px 28px;
   margin-bottom: 24px;
   display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
 }
 
 .card:hover {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-color: #dbeafe;
 }
 
-.header {
+.cardIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: #eaf6ff;
+  border-radius: 12px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #0077ff;
 }
 
-.summary {
-  margin-top: 12px;
-  font-size: 1.1rem;
-  color: #333;
+.cardContent {
+  flex: 1;
 }
 
-@media (max-width: 900px) {
-  .card {
-    padding: 20px;
-    margin-bottom: 16px;
-    border-radius: 12px;
-  }
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
-@media (max-width: 600px) {
-  .card {
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
+.cardSummary {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.cardActions {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 8px;
 }

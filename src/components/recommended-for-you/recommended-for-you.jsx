@@ -1,8 +1,11 @@
+import { memo } from "react";
 import styles from "./recommended-for-you.module.css";
 
-export const RecommendedForYou = ({ logic }) => (
-  <div className={styles.recommendation}>
-    <h3>Recommended for You</h3>
-    <p>Based on your preferences: <strong>{logic}</strong></p>
-  </div>
-);
+export const RecommendedForYou = memo(({ logic }) => {
+  return (
+    <div className={styles.recommendationReason}>
+      <h3 className={styles.header}>Recommended for you</h3>
+      <div className={styles.chips}>{logic}</div>
+    </div>
+  );
+});

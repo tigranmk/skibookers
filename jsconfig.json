@@ -5,7 +5,9 @@
       "ui/*": ["ui/*"],
       "components/*": ["components/*"],
       "styles/*": ["styles/*"],
-      "data/*": ["data/*"]
+      "data/*": ["data/*"],
+      "constants/*": ["constants/*"],
+      "utils/*": ["utils/*"]
     }
   }
 }

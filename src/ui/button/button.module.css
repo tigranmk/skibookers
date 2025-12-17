@@ -1,52 +1,68 @@
-.editBtn {
+.primaryBtn,
+.secondaryBtn,
+.dangerBtn {
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  display: inline-block;
+}
+
+/* Variants */
+.primaryBtn {
   background: #0077ff;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 16px;
-  cursor: pointer;
-  margin-right: 8px;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
 }
-.editBtn:hover {
+
+.primaryBtn:hover:not(:disabled) {
   background: #005bb5;
 }
 
-.removeBtn {
+.secondaryBtn {
+  background: #f5f7fa;
+  color: #333;
+  border: 1px solid #d1d5db;
+}
+
+.secondaryBtn:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #bdbdbd;
+  color: #111;
+}
+
+.dangerBtn {
   background: #d32f2f;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 16px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
 }
-.removeBtn:hover {
+
+.dangerBtn:hover:not(:disabled) {
   background: #b71c1c;
 }
 
-.addBtn {
-  background: #0077ff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 16px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
-}
-.addBtn:hover {
-  background: #005bb5;
+/* Sizes */
+.small {
+  font-size: 0.85rem;
+  padding: 4px 10px;
 }
 
-.editBtn:disabled,
-.editBtn[aria-disabled="true"],
-.removeBtn:disabled,
-.removeBtn[aria-disabled="true"],
-.addBtn:disabled,
-.addBtn[aria-disabled="true"] {
+.medium {
+  font-size: 1rem;
+  padding: 6px 16px;
+}
+
+.large {
+  font-size: 1.15rem;
+  padding: 10px 24px;
+}
+
+.primaryBtn:disabled,
+.primaryBtn[aria-disabled="true"],
+.secondaryBtn:disabled,
+.secondaryBtn[aria-disabled="true"],
+.dangerBtn:disabled,
+.dangerBtn[aria-disabled="true"] {
   background: #b3d1ff;
   color: #e6e6e6;
   cursor: not-allowed;
