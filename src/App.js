@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { mockTrip } from "./data/mock-trip";
+import { ResortHeader } from "./components/resort-header/resort-header";
+import { TripPackageOverview } from "./components/trip-package-overview/trip-package-overview";
+import { RecommendedForYou } from "./components/recommended-for-you/recommended-for-you";
+import styles from "./app.module.css";
 
-function App() {
+export const  App = () => {
+  const [trip, setTrip] = useState(mockTrip);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className={styles.container}>
+      <ResortHeader resort={trip.resort} />
+      <RecommendedForYou logic={trip.recommendation} />
+      <TripPackageOverview trip={trip} />
+   </div>
   );
 }
-
-export default App;
